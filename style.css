@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f0f0;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background: #121212;
+  color: #f5f5f5;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 🧑 Profile Section */
+.profile-section {
+  text-align: center;
+  margin: 20px auto 0;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00796b;
+}
+.profile-section h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.social-links {
+  margin-top: 8px;
+}
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #00796b;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+body.dark .social-links a {
+  color: #4dd0e1;
+}
+
+/* 🎮 Game Container */
+.game-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mode-toggle input {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Player Setup */
+.player-setup {
+  margin: 20px 0;
+}
+.player-setup input {
+  padding: 10px;
+  width: 80%;
+  margin: 5px 0;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+.player-setup input:focus {
+  outline: none;
+  border-color: #00796b;
+}
+.player-setup button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.player-setup button:hover {
+  background: #004d40;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+.scoreboard p {
+  margin: 0;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+.cell:hover {
+  background: #e0f7fa;
+  transform: scale(1.05);
+}
+body.dark .cell {
+  background: #1e1e1e;
+  border-color: #777;
+}
+body.dark .cell:hover {
+  background: #2c2c2c;
+}
+
+/* Message & Buttons */
+.message {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  min-height: 24px;
+}
+.buttons {
+  margin-bottom: 20px;
+}
+#restart, .buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+}
+#restart:hover {
+  background: #c62828;
+}
+
+/* Leaderboard */
+.leaderboard {
+  margin-top: 30px;
+  text-align: left;
+  max-width: 400px;
+  margin-inline: auto;
+}
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.leaderboard th, .leaderboard td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.leaderboard th {
+  background-color: #00796b;
+  color: white;
+}
+body.dark .leaderboard th {
+  background-color: #004d40;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .scoreboard {
+    flex-direction: column;
+  }
+}

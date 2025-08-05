@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎮 Realistic Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🧑 Profile -->
+  <div class="profile-section">
+    <img src="anuj.jpg" alt="Anuj Yadav" class="profile-pic" />
+    <h2>Anuj Yadav</h2>
+    <div class="social-links">
+      <a href="https://github.com/anuj-yadav-7716" target="_blank">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/anuj-yadav-578545295/" target="_blank">💼 LinkedIn</a>
+      <a href="https://instagram.com/anuj_yadav_7716" target="_blank">📷 Instagram</a>
+    </div>
+  </div>
+
+  <!-- 🎮 Game -->
+  <div class="game-container">
+    <header>
+      <h1>🎮 Tic-Tac-Toe</h1>
+      <div class="mode-toggle">
+        <label for="darkMode">🌙</label>
+        <input type="checkbox" id="darkMode" />
+      </div>
+    </header>
+
+    <section class="player-setup">
+      <input type="text" id="player1" placeholder="Player 1 Name (X)" />
+      <input type="text" id="player2" placeholder="Player 2 Name (O) or AI" />
+      <label><input type="checkbox" id="vsAI" /> Play vs AI 🤖</label><br/>
+      <button id="startGame">Start Game</button>
+    </section>
+
+    <section class="scoreboard">
+      <p id="scoreX">X: 0</p>
+      <p id="scoreO">O: 0</p>
+    </section>
+
+    <div id="board" class="board"></div>
+
+    <div id="message" class="message">Click Start to Play</div>
+
+    <div class="buttons">
+      <button id="restart">🔁 Restart</button>
+      <button onclick="clearLeaderboard()">🗑️ Clear Leaderboard</button>
+    </div>
+
+    <section class="leaderboard">
+      <h2>🏆 Leaderboard</h2>
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Player</th><th>Wins</th></tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <footer>
+    <p>Built by Anuj Yadav | <a href="#">GitHub</a></p>
+  </footer>
+
+  <audio id="moveSound" src="click.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
